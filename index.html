@@ -90,7 +90,7 @@
       .cursor-crosshair { cursor: crosshair; }
       .cursor-grabbing { cursor: grabbing; }
     </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
@@ -104,5 +104,7 @@
 </head>
   <body>
     <div id="root"></div>
+    <!-- 这里添加了指向 src/index.tsx 的引用，告诉 Vite 从这里开始打包 -->
+    <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>
