@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorldArchitect - 世界观架构师</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Default Theme (Indigo/Slate) */
+        --color-primary: #6366f1;
+        --color-bg-main: #0f172a;
+        --color-bg-panel: rgba(30, 41, 59, 0.7);
+        --color-bg-input: #1e293b;
+        --color-bg-hover: #334155;
+        --color-text-main: #e2e8f0;
+        --color-text-muted: #94a3b8;
+        --color-border: rgba(148, 163, 184, 0.1);
+      }
+
+      body { 
+        font-family: 'Noto Sans SC', sans-serif; 
+        background-color: var(--color-bg-main); 
+        color: var(--color-text-main); 
+        margin: 0; 
+        overflow: hidden; 
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      /* Global Scrollbar */
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
+
+      /* Unified Theme Classes */
+      .theme-app {
+        background-color: var(--color-bg-main);
+        color: var(--color-text-main);
+      }
+      
+      .glass-panel { 
+        background: var(--color-bg-panel); 
+        backdrop-filter: blur(12px); 
+        border: 1px solid var(--color-border); 
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+      }
+
+      .theme-input {
+        background-color: var(--color-bg-input);
+        border: 1px solid var(--color-border);
+        color: var(--color-text-main);
+        transition: all 0.2s;
+      }
+      .theme-input:focus {
+        border-color: var(--color-primary);
+        outline: none;
+        box-shadow: 0 0 0 1px var(--color-primary);
+      }
+
+      .theme-btn-primary {
+        background-color: var(--color-primary);
+        color: #ffffff;
+      }
+      .theme-btn-primary:hover {
+        filter: brightness(1.1);
+      }
+
+      .theme-item-hover:hover {
+        background-color: var(--color-bg-hover);
+      }
+      
+      .theme-item-active {
+        background-color: var(--color-primary);
+        color: #ffffff;
+      }
+      
+      .theme-text-accent {
+        color: var(--color-primary);
+      }
+      
+      .theme-border {
+        border-color: var(--color-border);
+      }
+
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      .cursor-crosshair { cursor: crosshair; }
+      .cursor-grabbing { cursor: grabbing; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
